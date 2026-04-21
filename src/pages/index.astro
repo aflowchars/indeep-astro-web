@@ -1,0 +1,1067 @@
+---
+import Layout from "../layouts/Layout.astro";
+import MenuIcon from "../components/icons/MenuIcon.astro";
+import GlobeIcon from "../components/icons/GlobeIcon.astro";
+import ArrowRightIcon from "../components/icons/ArrowRightIcon.astro";
+import CloudDownloadIcon from "../components/icons/CloudDownloadIcon.astro";
+import MapPinIcon from "../components/icons/MapPinIcon.astro";
+import HandshakeIcon from "../components/icons/HandshakeIcon.astro";
+import ClockIcon from "../components/icons/ClockIcon.astro";
+import TiktokIcon from "../components/icons/TiktokIcon.astro";
+import InstagramIcon from "../components/icons/InstagramIcon.astro";
+import YoutubeIcon from "../components/icons/YoutubeIcon.astro";
+---
+
+<Layout>
+  <!-- Navbar -->
+  <div
+    class="navigation fixed top-0 left-0 z-999 flex h-16 w-full items-center justify-center border-b border-gray-50/25 bg-transparent text-sm text-white transition-all duration-300 ease-in"
+  >
+    <div class="container mx-auto px-5 md:px-10 xl:px-20">
+      <nav class="grid w-full grid-cols-3">
+        <!-- Logo -->
+        <div class="nav-logo col-span-1 justify-start">
+          <a href="/">
+            <img class="h-11" src="/brands/indeep-logo.png" alt="Indeep Logo" />
+          </a>
+        </div>
+
+        <!-- Menu -->
+        <ul class="nav-menu hidden items-center justify-center gap-6 xl:flex">
+          <li>
+            <a href="/">Home</a>
+          </li>
+          <li>
+            <a href="/">Schedule</a>
+          </li>
+          <li>
+            <a href="/">Programs</a>
+          </li>
+        </ul>
+
+        <!-- CTA -->
+        <div class="nav-actions flex flex-row items-center justify-end gap-6">
+          <button class="flex items-center gap-1.5">
+            <div class="size-5">
+              <img src="/brands/uk-flag.png" alt="UK Flag" />
+            </div>
+            <span class="uppercase"> EN </span>
+          </button>
+
+          <button class="flex items-center gap-1.5">
+            <MenuIcon class:list={"size-5 text-white"} />
+            <span class="text-sm uppercase">Menu</span>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </div>
+
+  <!-- Main -->
+  <main class="">
+    <header class="hero relative h-screen w-full overflow-hidden">
+      <div class="hero-background absolute top-0 left-0 -z-10 h-full w-full">
+        <div
+          class="absolute top-0 left-0 h-40 w-full bg-linear-to-b from-gray-950 to-gray-950/0"
+        >
+        </div>
+        <div
+          class="absolute bottom-0 left-0 h-60 w-full bg-linear-to-t from-gray-950 to-gray-950/0"
+        >
+        </div>
+        <div
+          class="absolute top-0 left-0 h-full w-full bg-linear-to-t from-gray-950 to-gray-950/0"
+        >
+        </div>
+        <img
+          class="h-full w-full object-cover object-center"
+          src="/images/hero-1.png"
+          alt="Hero 1"
+        />
+      </div>
+
+      <div
+        class="hero-content relative z-50 flex h-full flex-col items-center justify-center text-gray-50"
+      >
+        <div class="container mx-auto md:px-10 xl:px-20">
+          <div
+            class="flex w-fit items-center gap-1 rounded-full border-2 border-gray-50/25 bg-gray-50/10 px-4 py-2 backdrop-blur-sm"
+          >
+            <GlobeIcon class:list={"size-5 text-gray-50"} />
+
+            <p class="text-sm">University of Mataram</p>
+          </div>
+
+          <div class="mt-6 max-w-lg space-y-5">
+            <h1 class="text-6xl leading-none font-semibold tracking-tight">
+              <span class="text-7xl">International</span><br />
+              <span>Degree Programs</span>
+            </h1>
+            <p class="text-base text-gray-200">
+              INDEEP is a degree-granting educational program from the
+              University of Mataram for scholars from Indonesia and worldwide
+              which allows international exposure to English-mediate learning
+              processes.
+            </p>
+          </div>
+
+          <div class="mt-12 flex items-center gap-4">
+            <button
+              class="flex items-center gap-1.5 rounded-md border border-sky-300/25 bg-sky-600 px-4 py-2.5 text-sm font-semibold text-gray-50"
+            >
+              Register Now
+
+              <ArrowRightIcon class:list={"size-5 text-gray-50"} />
+            </button>
+
+            <button
+              class="flex items-center gap-1.5 rounded-md border border-gray-50 bg-gray-50/10 px-4 py-2.5 text-sm font-semibold text-gray-50"
+            >
+              <CloudDownloadIcon class:list={"size-5 text-gray-50"} />
+              Download Brochure
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="benefit bg-gray-950 text-gray-50">
+      <div
+        class="container mx-auto grid grid-cols-3 gap-12 border-t border-gray-50/25 py-24 md:px-10 xl:px-20"
+      >
+        <div>
+          <p class="text-5xl font-medium">1000+</p>
+          <h5 class="mt-2 text-xl font-semibold">Global Scholars</h5>
+          <p class="mt-3 text-sm text-gray-300">
+            A diverse community of ambitious students gaining a competitive edge
+            through international exposure and cross-cultural collaboration.
+          </p>
+        </div>
+        <div>
+          <p class="text-5xl font-medium">20+</p>
+          <h5 class="mt-2 text-xl font-semibold">
+            Prestigious University Partners
+          </h5>
+          <p class="mt-3 text-sm text-gray-300">
+            Collaborating with world-class institutions to provide seamless
+            credit transfers and exclusive double degree opportunities.
+          </p>
+        </div>
+        <div>
+          <p class="text-5xl font-medium">15+</p>
+          <h5 class="mt-2 text-xl font-semibold">Destination Countries</h5>
+          <p class="mt-3 text-sm text-gray-300">
+            Broaden your horizons with study paths spanning across the UK,
+            Australia, USA, Europe, and Asia. Get your dreams to study across
+            the world now!
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="intro-video py-28">
+      <div class="container mx-auto md:px-10 xl:px-20">
+        <iframe
+          class="aspect-video rounded-xl border border-gray-100 shadow-lg"
+          width="100%"
+          height="100%"
+          src="https://www.youtube.com/embed/IAkYvMx14dI?si=-eVX0dwe5Qh396t6"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen></iframe>
+      </div>
+    </section>
+
+    <div class="divider container mx-auto md:px-10 xl:px-20">
+      <div class="h-px w-full bg-gray-200"></div>
+    </div>
+
+    <section class="py-28">
+      <div class="container mx-auto md:px-10 xl:px-20">
+        <div class="grid grid-cols-2">
+          <h3 class="w-8/12 text-5xl leading-[1.2] font-semibold">
+            Our International Programs
+          </h3>
+          <p
+            class="max-w-lg place-content-center justify-self-end text-base text-gray-700"
+          >
+            Step into a world of excellence with our curated degree programs.
+            Whether you are looking for a double degree or a global exchange,
+            your journey to a world-class education starts here.
+          </p>
+          <a
+            href="/programs"
+            class="mt-8 flex items-center gap-1.5 font-medium text-gray-800"
+          >
+            Explore All
+
+            <ArrowRightIcon class:list={"size-5 text-gray-800"} />
+          </a>
+        </div>
+
+        <div class="mt-14 grid grid-cols-2 gap-12">
+          <div class="flex items-center gap-6">
+            <div class="h-full w-6/12 overflow-hidden rounded-md">
+              <img
+                class="h-full w-full object-cover"
+                src="/images/program-1.png"
+                alt="Program 1"
+              />
+            </div>
+
+            <div
+              class="flex h-full w-6/12 flex-col items-start justify-between py-3"
+            >
+              <div>
+                <a href="/" class="text-xl leading-tight font-semibold">
+                  Master of Management
+                </a>
+
+                <div class="mt-2 space-y-1">
+                  <p
+                    class="text-xs font-bold tracking-wide text-gray-600 uppercase"
+                  >
+                    Program
+                  </p>
+
+                  <p
+                    class="w-10/12 text-sm leading-normal font-medium text-gray-800"
+                  >
+                    Full Degree, Regular Credit Transfer, Thesis Credit Transfer
+                  </p>
+                </div>
+              </div>
+
+              <a
+                href="/"
+                class="mt-4 flex items-center gap-1 text-sm font-semibold text-gray-950"
+              >
+                Read More
+
+                <ArrowRightIcon class:list={"size-4 text-gray-800"} />
+              </a>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-6">
+            <div class="h-full w-6/12 overflow-hidden rounded-md">
+              <img
+                class="h-full w-full object-cover"
+                src="/images/program-2.png"
+                alt="Program 2"
+              />
+            </div>
+
+            <div
+              class="flex h-full w-6/12 flex-col items-start justify-between py-3"
+            >
+              <div>
+                <a href="/" class="text-xl leading-tight font-semibold">
+                  Bachelor of Agribusiness
+                </a>
+
+                <div class="mt-2 space-y-1">
+                  <p
+                    class="text-xs font-bold tracking-wide text-gray-600 uppercase"
+                  >
+                    Program
+                  </p>
+
+                  <p
+                    class="w-10/12 text-sm leading-normal font-medium text-gray-800"
+                  >
+                    Full Degree, Regular Credit Transfer, Thesis Credit Transfer
+                  </p>
+                </div>
+              </div>
+
+              <a
+                href="/"
+                class="mt-4 flex items-center gap-1 text-sm font-semibold text-gray-950"
+              >
+                Read More
+
+                <ArrowRightIcon class:list={"size-4 text-gray-800"} />
+              </a>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-6">
+            <div class="h-full w-6/12 overflow-hidden rounded-md">
+              <img
+                class="h-full w-full object-cover"
+                src="/images/program-3.png"
+                alt="Program 3"
+              />
+            </div>
+
+            <div
+              class="flex h-full w-6/12 flex-col items-start justify-between py-3"
+            >
+              <div>
+                <a href="/" class="text-xl leading-normal font-semibold">
+                  Bachelor of Development Economics
+                </a>
+
+                <div class="mt-2 space-y-1">
+                  <p
+                    class="text-xs font-bold tracking-wide text-gray-600 uppercase"
+                  >
+                    Program
+                  </p>
+
+                  <p
+                    class="w-10/12 text-sm leading-normal font-medium text-gray-800"
+                  >
+                    Full Degree, Regular Credit Transfer, Thesis Credit Transfer
+                  </p>
+                </div>
+              </div>
+
+              <a
+                href="/"
+                class="mt-4 flex items-center gap-1 text-sm font-semibold text-gray-950"
+              >
+                Read More
+
+                <ArrowRightIcon class:list={"size-4 text-gray-800"} />
+              </a>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-6">
+            <div class="h-full w-6/12 overflow-hidden rounded-md">
+              <img
+                class="h-full w-full object-cover"
+                src="/images/program-4.png"
+                alt="Program 4"
+              />
+            </div>
+
+            <div
+              class="flex h-full w-6/12 flex-col items-start justify-between py-3"
+            >
+              <div>
+                <a href="/" class="text-xl leading-tight font-semibold">
+                  Bachelor of Development Economics
+                </a>
+
+                <div class="mt-2 space-y-1">
+                  <p
+                    class="text-xs font-bold tracking-wide text-gray-600 uppercase"
+                  >
+                    Program
+                  </p>
+
+                  <p
+                    class="w-10/12 text-sm leading-normal font-medium text-gray-800"
+                  >
+                    Full Degree, Regular Credit Transfer, Thesis Credit Transfer
+                  </p>
+                </div>
+              </div>
+
+              <a
+                href="/"
+                class="mt-4 flex items-center gap-1 text-sm font-semibold text-gray-950"
+              >
+                Read More
+
+                <ArrowRightIcon class:list={"size-4 text-gray-800"} />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-neutral-100 py-28">
+      <div
+        class="container mx-auto flex items-start justify-between md:px-10 xl:px-20"
+      >
+        <div class="max-w-lg space-y-5">
+          <h3 class="text-5xl leading-[1.15] font-semibold">
+            Discover the Indeep Experience
+          </h3>
+
+          <a
+            href="/"
+            class="flex items-center gap-2 text-lg font-medium text-gray-800"
+          >
+            Read More Stories
+            <ArrowRightIcon class:list={"size-5"} />
+          </a>
+        </div>
+
+        <div class="max-w-2xl">
+          <div class="flex items-start justify-between">
+            <img
+              class="h-12"
+              src="/images/testimony-1.png"
+              alt="Testimony Logo 1"
+            />
+
+            <div class="w-40 space-y-1 text-right">
+              <p
+                class="text-[10px] font-semibold tracking-wider text-gray-500 uppercase"
+              >
+                Students from
+              </p>
+
+              <p class="text-base leading-snug font-medium text-gray-800">
+                Massey University, New Zealand
+              </p>
+            </div>
+          </div>
+
+          <p class="mt-8 text-xl leading-normal font-medium text-neutral-800">
+            "The professors at Indeep are incredibly supportive and highly
+            qualified. The learning atmosphere in Mataram is unique — combining
+            rigorous academic standards with a rich cultural experience. It's
+            the perfect place to broaden your horizons while earning a
+            world-class degree."
+          </p>
+
+          <div class="mt-12 flex items-center justify-between">
+            <div class="flex items-start gap-3">
+              <img
+                class="size-16 rounded-full"
+                src="/images/testimony-author-1.png"
+                alt="Testimony Author 1"
+              />
+
+              <div class="w-48 space-y-0.5">
+                <h5 class="text-base font-semibold">Mark Thompson</h5>
+                <p class="text-xs font-medium text-gray-600">
+                  International Relations, Student Exchange
+                </p>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-2">
+              <div
+                class="flex size-12 items-center justify-center rounded-full bg-gray-100"
+              >
+                <ArrowRightIcon class:list={"size-5 rotate-180"} />
+              </div>
+
+              <p class="text-sm font-semibold">1 / 10</p>
+
+              <div
+                class="flex size-12 items-center justify-center rounded-full bg-gray-100"
+              >
+                <ArrowRightIcon class:list={"size-5"} />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Registration Timeline -->
+    <section class="registration-timeline py-28">
+      <div class="container mx-auto md:px-10 xl:px-20">
+        <div class="flex flex-col items-center text-center">
+          <h3 class="text-5xl font-semibold">Registration Timeline</h3>
+
+          <p class="mt-4 max-w-4xl text-center text-lg text-gray-700">
+            Mark your calendar and follow our structured admissions process.
+            Ensure all requirements are submitted within the designated timeline
+            to secure your spot in our international program.
+          </p>
+
+          <div class="mt-8">
+            <button
+              class="flex items-center gap-1.5 rounded-md border border-sky-300/25 bg-sky-600 px-4 py-2.5 text-sm font-semibold text-gray-50"
+            >
+              Register Now
+
+              <ArrowRightIcon class:list={"size-5 text-gray-50"} />
+            </button>
+          </div>
+        </div>
+
+        <div class="mt-16 grid grid-cols-3 gap-12">
+          <div class="flex flex-row items-start gap-4">
+            <div class="w-full max-w-28 pt-4">
+              <div class="h-1 w-full bg-sky-600"></div>
+              <p class="mt-3 text-right text-base font-semibold text-gray-800">
+                March 5 – May 31, 2026
+              </p>
+            </div>
+
+            <div class="h-full w-px bg-gray-300"></div>
+
+            <div class="py-4">
+              <div class="aspect-video overflow-hidden rounded-md">
+                <img
+                  class="h-full w-full object-cover"
+                  src="/images/timeline-1.png"
+                  alt="Timeline 1"
+                />
+              </div>
+
+              <h5 class="mt-4 text-xl font-semibold">Registration Period</h5>
+
+              <div class="mt-6 flex flex-col items-start">
+                <p
+                  class="text-xs font-bold tracking-wider text-sky-600 uppercase"
+                >
+                  Location
+                </p>
+
+                <p class="mt-0.5 w-11/12 flex-1 font-medium text-gray-600">
+                  Indeep Office, Rectorate Building, 4th Floor
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex flex-row items-end gap-4">
+            <div class="w-full max-w-28 pb-4">
+              <div class="h-1 w-full bg-sky-600"></div>
+              <p class="mt-3 text-right text-base font-semibold text-gray-800">
+                June 27 – 28, 2026
+              </p>
+            </div>
+
+            <div class="h-full w-px bg-gray-300"></div>
+
+            <div class="py-4">
+              <h5 class="w-10/12 text-xl font-semibold">
+                Academic Potential Test - CBT
+              </h5>
+
+              <div class="mt-6 flex flex-col items-start">
+                <p
+                  class="text-xs font-bold tracking-wider text-sky-600 uppercase"
+                >
+                  Location
+                </p>
+
+                <p class="flex-1 font-medium text-gray-600">
+                  UPA TIK (ICT Center)
+                </p>
+              </div>
+
+              <div class="mt-4 aspect-video overflow-hidden rounded-md">
+                <img
+                  class="h-full w-full object-cover"
+                  src="/images/timeline-2.png"
+                  alt="Timeline 2"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="flex flex-row items-start gap-4">
+            <div class="w-full max-w-28 pt-4">
+              <div class="h-1 w-full bg-sky-600"></div>
+              <p class="mt-3 text-right text-base font-semibold text-gray-800">
+                July 4 – 5, 2026
+              </p>
+            </div>
+
+            <div class="h-full w-px bg-gray-300"></div>
+
+            <div class="py-4">
+              <div class="aspect-video overflow-hidden rounded-md">
+                <img
+                  class="h-full w-full object-cover"
+                  src="/images/timeline-3.png"
+                  alt="Timeline 3"
+                />
+              </div>
+
+              <h5 class="mt-4 text-xl font-semibold">
+                Placement Test (TOEFL/UMEPT)
+              </h5>
+
+              <div class="mt-6 flex flex-col items-start">
+                <p
+                  class="text-xs font-bold tracking-wider text-sky-600 uppercase"
+                >
+                  Location
+                </p>
+
+                <p class="mt-0.5 w-11/12 flex-1 font-medium text-gray-600">
+                  UPA Language Center
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex flex-row items-start gap-4">
+            <div class="w-full max-w-28 pt-4">
+              <div class="h-1 w-full bg-sky-600"></div>
+              <p class="mt-3 text-right text-base font-semibold text-gray-800">
+                July 10 – 11, 2026
+              </p>
+            </div>
+
+            <div class="h-full w-px bg-gray-300"></div>
+
+            <div class="py-4">
+              <div class="aspect-video overflow-hidden rounded-md">
+                <img
+                  class="h-full w-full object-cover"
+                  src="/images/timeline-4.png"
+                  alt="Timeline 4"
+                />
+              </div>
+
+              <h5 class="mt-4 text-xl font-semibold">Interview Selection</h5>
+
+              <div class="mt-6 flex flex-col items-start">
+                <p
+                  class="text-xs font-bold tracking-wider text-sky-600 uppercase"
+                >
+                  Location
+                </p>
+
+                <p class="mt-0.5 w-11/12 flex-1 font-medium text-gray-600">
+                  Indeep Office, Rectorate Building, 4th Floor
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex flex-row items-end gap-4">
+            <div class="w-full max-w-28 pb-4">
+              <div class="h-1 w-full bg-sky-600"></div>
+              <p class="mt-3 text-right text-base font-semibold text-gray-800">
+                July 13, 2026
+              </p>
+            </div>
+
+            <div class="h-full w-px bg-gray-300"></div>
+
+            <div class="py-4">
+              <h5 class="w-10/12 text-xl font-semibold">
+                Final Result Announcement
+              </h5>
+
+              <div class="mt-6 flex flex-col items-start">
+                <p
+                  class="text-xs font-bold tracking-wider text-sky-600 uppercase"
+                >
+                  Link
+                </p>
+
+                <p class="flex-1 font-medium text-gray-600">
+                  indeep.unram.ac.id/announcement
+                </p>
+              </div>
+
+              <div class="mt-4 aspect-video overflow-hidden rounded-md">
+                <img
+                  class="h-full w-full object-cover"
+                  src="/images/timeline-5.png"
+                  alt="Timeline 5"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- News -->
+    <section class="news bg-gray-100 py-28">
+      <div class="container mx-auto md:px-10 xl:px-20">
+        <div class="grid grid-cols-2">
+          <h3 class="w-8/12 text-5xl leading-[1.2] font-semibold">
+            Latest News & Global Insights
+          </h3>
+          <p
+            class="max-w-lg place-content-center justify-self-end text-base text-gray-700"
+          >
+            Stay updated with the latest academic milestones, prestigious
+            international partnerships, and inspiring student achievements from
+            the InDeep International Degree Program at the University of Mataram
+          </p>
+          <a
+            href="/programs"
+            class="mt-8 flex items-center gap-1.5 font-medium text-gray-800"
+          >
+            View All News
+
+            <ArrowRightIcon class:list={"size-5 text-gray-800"} />
+          </a>
+        </div>
+
+        <div class="mt-16 grid grid-cols-3 gap-12">
+          <div class="news-card">
+            <!-- Image -->
+            <div class="aspect-video overflow-hidden rounded-md">
+              <img
+                class="h-full w-full object-cover"
+                src="/images/news-1.png"
+                alt="News 1"
+              />
+            </div>
+
+            <!-- Category & Reading time -->
+            <div class="mt-5 flex items-center gap-2">
+              <div
+                class="flex flex-row gap-1 rounded-md bg-sky-600 px-2 py-1 text-xs font-semibold tracking-normal text-gray-50"
+              >
+                <HandshakeIcon class:list={"size-4 stroke-2 text-gray-50"} />
+                Partnership
+              </div>
+              <div
+                class="flex flex-row gap-1 rounded-md bg-gray-200 px-2 py-1 text-xs font-semibold tracking-normal text-gray-600"
+              >
+                <ClockIcon class:list={"size-4 stroke-2 text-gray-600"} />
+                5 Min Read
+              </div>
+            </div>
+
+            <!-- Title -->
+            <h5 class="mt-3 text-xl font-semibold text-gray-900">
+              Indeep Unram Extends Global Partnership with Top Australian
+              Universities
+            </h5>
+
+            <!-- Description -->
+            <p class="mt-3 text-base text-gray-700">
+              A new milestone in international education as InDeep expands its
+              double degree opportunities, offering students more pathways to
+              study in Australia [...]
+            </p>
+
+            <!-- Author -->
+            <div class="mt-10 flex items-center gap-2.5">
+              <div
+                class="flex size-12 items-center justify-center rounded-full bg-gray-200"
+              >
+                <img
+                  class="size-10"
+                  src="/images/news-author-1.png"
+                  alt="News Author 1"
+                />
+              </div>
+
+              <div class="text-left">
+                <h5 class="text-base font-semibold text-gray-800">
+                  Indeep Unram
+                </h5>
+                <p class="text-sm font-medium text-gray-500">April 10, 2026</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="news-card">
+            <!-- Image -->
+            <div class="aspect-video overflow-hidden rounded-md">
+              <img
+                class="h-full w-full object-cover"
+                src="/images/news-2.png"
+                alt="News 2"
+              />
+            </div>
+
+            <!-- Category & Reading time -->
+            <div class="mt-5 flex items-center gap-2">
+              <div
+                class="flex flex-row gap-1 rounded-md bg-sky-600 px-2 py-1 text-xs font-semibold tracking-normal text-gray-50"
+              >
+                <HandshakeIcon class:list={"size-4 stroke-2 text-gray-50"} />
+                Achievement
+              </div>
+              <div
+                class="flex flex-row gap-1 rounded-md bg-gray-200 px-2 py-1 text-xs font-semibold tracking-normal text-gray-600"
+              >
+                <ClockIcon class:list={"size-4 stroke-2 text-gray-600"} />
+                3 Min Read
+              </div>
+            </div>
+
+            <!-- Title -->
+            <h5 class="mt-3 text-xl font-semibold text-gray-900">
+              Student Spotlight: Achieving Excellence in the International Moot
+              Court
+            </h5>
+
+            <!-- Description -->
+            <p class="mt-3 text-base text-gray-700">
+              Our students continue to shine on the world stage, securing a
+              top-five position in the prestigious International Moot Court
+              competition held in [...]
+            </p>
+
+            <!-- Author -->
+            <div class="mt-10 flex items-center gap-2.5">
+              <div
+                class="flex size-12 items-center justify-center rounded-full bg-gray-200"
+              >
+                <img
+                  class="size-10"
+                  src="/images/news-author-1.png"
+                  alt="News Author 1"
+                />
+              </div>
+
+              <div class="text-left">
+                <h5 class="text-base font-semibold text-gray-800">
+                  Indeep Unram
+                </h5>
+                <p class="text-sm font-medium text-gray-500">April 10, 2026</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="news-card">
+            <!-- Image -->
+            <div class="aspect-video overflow-hidden rounded-md">
+              <img
+                class="h-full w-full object-cover"
+                src="/images/news-3.png"
+                alt="News 3"
+              />
+            </div>
+
+            <!-- Category & Reading time -->
+            <div class="mt-5 flex items-center gap-2">
+              <div
+                class="flex flex-row gap-1 rounded-md bg-sky-600 px-2 py-1 text-xs font-semibold tracking-normal text-gray-50"
+              >
+                <HandshakeIcon class:list={"size-4 stroke-2 text-gray-50"} />
+                Admissions
+              </div>
+
+              <div
+                class="flex flex-row gap-1 rounded-md bg-gray-200 px-2 py-1 text-xs font-semibold tracking-normal text-gray-600"
+              >
+                <ClockIcon class:list={"size-4 stroke-2 text-gray-600"} />
+                5 Min Read
+              </div>
+            </div>
+
+            <!-- Title -->
+            <h5 class="mt-3 text-xl font-semibold text-gray-900">
+              Navigating Your Global Education: A Guide to the 2026 Intake
+            </h5>
+
+            <!-- Description -->
+            <p class="mt-3 text-base text-gray-700">
+              Everything you need to know about the upcoming registration
+              period, from document preparation to scholarship opportunities for
+              the new academic [...]
+            </p>
+
+            <!-- Author -->
+            <div class="mt-10 flex items-center gap-2.5">
+              <div
+                class="flex size-12 items-center justify-center rounded-full bg-gray-200"
+              >
+                <img
+                  class="size-10"
+                  src="/images/news-author-1.png"
+                  alt="News Author 1"
+                />
+              </div>
+
+              <div class="text-left">
+                <h5 class="text-base font-semibold text-gray-800">
+                  Indeep Unram
+                </h5>
+                <p class="text-sm font-medium text-gray-500">May 23, 2026</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-950 pt-28 text-gray-50">
+    <div class="container mx-auto md:px-10 xl:px-20">
+      <div class="flex items-center justify-between pb-20">
+        <div class="max-w-lg">
+          <h3 class="text-5xl leading-tight font-semibold">
+            Ready to Start Your Global Journey?
+          </h3>
+
+          <p class="mt-2.5 text-gray-300">
+            Join a community of future leaders and gain world-class education
+            with our international degree programs. Secure your future today.
+          </p>
+
+          <div class="mt-6 flex items-center gap-4">
+            <button
+              class="flex items-center gap-1.5 rounded-md border border-sky-300/25 bg-sky-600 px-4 py-2.5 text-sm font-semibold text-gray-50"
+            >
+              Register Now
+
+              <ArrowRightIcon class:list={"size-5 text-gray-50"} />
+            </button>
+
+            <button
+              class="flex items-center gap-1.5 rounded-md border border-gray-50 bg-gray-50/10 px-4 py-2.5 text-sm font-semibold text-gray-50"
+            >
+              <CloudDownloadIcon class:list={"size-5 text-gray-50"} />
+              Download Brochure
+            </button>
+          </div>
+        </div>
+
+        <div class="flex flex-row items-start">
+          <div class="-mt-2 -mr-8 -rotate-3">
+            <img
+              class="h-56 w-auto"
+              src="/images/footer-1.png"
+              alt="Footer 1"
+            />
+          </div>
+          <img class="h-56 w-auto" src="/images/footer-2.png" alt="Footer 2" />
+        </div>
+      </div>
+
+      <div
+        class="flex items-start justify-between border-y border-gray-50/10 py-16"
+      >
+        <div class="flex flex-col items-start">
+          <a href="/">
+            <img
+              class="h-16 w-auto"
+              src="/brands/indeep-logo.png"
+              alt="Indeep Logo"
+            />
+          </a>
+
+          <div class="mt-6 max-w-md">
+            <p class="text-base text-gray-300">Address</p>
+            <p class="text-lg text-gray-50">
+              InDeep Office, Rectorate Building 4th Floor, Jl. Majapahit No. 62,
+              Mataram, NTB 83125, Indonesia.
+            </p>
+          </div>
+
+          <div class="flex items-center gap-8">
+            <div class="mt-6 max-w-md">
+              <p class="text-base text-gray-300">Email</p>
+              <p class="text-lg text-gray-50">indeep@unram.ac.id</p>
+            </div>
+
+            <div class="mt-6 max-w-md">
+              <p class="text-base text-gray-300">Whatsapp</p>
+              <p class="text-lg text-gray-50">+62 812-3456-7890</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="space-y-10 pt-8">
+          <div class="flex items-center gap-16">
+            <div class="space-y-3">
+              <h5 class="text-base font-semibold">Programs</h5>
+
+              <ul class="space-y-3.5 text-sm text-gray-300">
+                <li>
+                  <a href="/">Double Degree</a>
+                </li>
+                <li>
+                  <a href="/">Dual Degree</a>
+                </li>
+                <li>
+                  <a href="/">Student Exchange</a>
+                </li>
+                <li>
+                  <a href="/">Short Course</a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="space-y-3">
+              <h5 class="text-base font-semibold">Admissions</h5>
+
+              <ul class="space-y-3.5 text-sm text-gray-300">
+                <li>
+                  <a href="/">Requirements</a>
+                </li>
+                <li>
+                  <a href="/">Timeline</a>
+                </li>
+                <li>
+                  <a href="/">Fees & Funding</a>
+                </li>
+                <li>
+                  <a href="/">Online Registration</a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="space-y-3">
+              <h5 class="text-base font-semibold">Support</h5>
+
+              <ul class="space-y-3.5 text-sm text-gray-300">
+                <li>
+                  <a href="/">Contact Us</a>
+                </li>
+                <li>
+                  <a href="/">FAQ's</a>
+                </li>
+                <li>
+                  <a href="/">Document Center</a>
+                </li>
+                <li>
+                  <a href="/">Campus Map</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-4">
+            <div
+              class="flex size-16 items-center justify-center rounded-md bg-gray-900"
+            >
+              <TiktokIcon class:list={"size-5 fill-gray-300"} />
+            </div>
+
+            <div
+              class="flex size-16 items-center justify-center rounded-md bg-gray-900"
+            >
+              <InstagramIcon class:list={"size-5 fill-gray-300"} />
+            </div>
+
+            <div
+              class="flex size-16 items-center justify-center rounded-md bg-gray-900"
+            >
+              <YoutubeIcon class:list={"size-5 fill-gray-300"} />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex items-center justify-between py-8">
+        <p class="text-sm">
+          © 2026 InDeep University of Mataram. All Rights Reserved.
+        </p>
+
+        <nav class="flex items-center gap-4">
+          <a class="text-sm" href="/">Privacy Policy</a>
+          <a class="text-sm" href="/">Terms of Service</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+</Layout>
+
+<script>
+  const navbar = document.querySelector(".navigation");
+  const scrolledClasses = ["bg-gray-950/20", "backdrop-blur-md"];
+  const transparentClasses = ["bg-transparent"];
+
+  window.addEventListener("scroll", () => {
+    if (window.scrollY >= 800) {
+      navbar?.classList.remove(...transparentClasses);
+      navbar?.classList.add(...scrolledClasses);
+    } else {
+      navbar?.classList.remove(...scrolledClasses);
+      navbar?.classList.add(...transparentClasses);
+    }
+  });
+</script>
