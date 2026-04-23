@@ -4,7 +4,6 @@ import MenuIcon from "../components/icons/MenuIcon.astro";
 import GlobeIcon from "../components/icons/GlobeIcon.astro";
 import ArrowRightIcon from "../components/icons/ArrowRightIcon.astro";
 import CloudDownloadIcon from "../components/icons/CloudDownloadIcon.astro";
-import MapPinIcon from "../components/icons/MapPinIcon.astro";
 import HandshakeIcon from "../components/icons/HandshakeIcon.astro";
 import ClockIcon from "../components/icons/ClockIcon.astro";
 import TiktokIcon from "../components/icons/TiktokIcon.astro";
@@ -18,11 +17,15 @@ import YoutubeIcon from "../components/icons/YoutubeIcon.astro";
     class="navigation fixed top-0 left-0 z-999 flex h-16 w-full items-center justify-center border-b border-gray-50/25 bg-transparent text-sm text-white transition-all duration-300 ease-in"
   >
     <div class="container mx-auto px-5 md:px-10 xl:px-20">
-      <nav class="grid w-full grid-cols-3">
+      <nav class="grid w-full grid-cols-2 xl:grid-cols-3">
         <!-- Logo -->
         <div class="nav-logo col-span-1 justify-start">
           <a href="/">
-            <img class="h-11" src="/brands/indeep-logo.png" alt="Indeep Logo" />
+            <img
+              class="h-9 xl:h-11"
+              src="/brands/indeep-logo.png"
+              alt="Indeep Logo"
+            />
           </a>
         </div>
 
@@ -40,16 +43,22 @@ import YoutubeIcon from "../components/icons/YoutubeIcon.astro";
         </ul>
 
         <!-- CTA -->
-        <div class="nav-actions flex flex-row items-center justify-end gap-6">
-          <button class="flex items-center gap-1.5">
+        <div
+          class="nav-actions flex flex-row items-center justify-end gap-4 xl:gap-6"
+        >
+          <!-- Language Switcher -->
+          <button class="hidden items-center gap-1.5 xl:flex">
             <div class="size-5">
               <img src="/brands/uk-flag.png" alt="UK Flag" />
             </div>
+
             <span class="uppercase"> EN </span>
           </button>
 
+          <!-- Menu -->
           <button class="flex items-center gap-1.5">
             <MenuIcon class:list={"size-5 text-white"} />
+
             <span class="text-sm uppercase">Menu</span>
           </button>
         </div>
@@ -58,56 +67,77 @@ import YoutubeIcon from "../components/icons/YoutubeIcon.astro";
   </div>
 
   <!-- Main -->
-  <main class="">
+  <main class="main">
+    <!-- Hero -->
     <header class="hero relative h-screen w-full overflow-hidden">
+      <!-- Background -->
       <div class="hero-background absolute top-0 left-0 -z-10 h-full w-full">
         <div
           class="absolute top-0 left-0 h-40 w-full bg-linear-to-b from-gray-950 to-gray-950/0"
         >
         </div>
+
         <div
           class="absolute bottom-0 left-0 h-60 w-full bg-linear-to-t from-gray-950 to-gray-950/0"
         >
         </div>
+
         <div
           class="absolute top-0 left-0 h-full w-full bg-linear-to-t from-gray-950 to-gray-950/0"
         >
         </div>
+
         <img
-          class="h-full w-full object-cover object-center"
+          class="hidden h-full w-full object-cover md:block md:object-center"
           src="/images/hero-1.png"
+          alt="Hero 1"
+        />
+
+        <img
+          class="block h-full w-full object-cover md:hidden md:object-center"
+          src="/images/hero-1-sm.png"
           alt="Hero 1"
         />
       </div>
 
+      <!-- Content -->
       <div
-        class="hero-content relative z-50 flex h-full flex-col items-center justify-center text-gray-50"
+        class="hero-content relative z-50 flex h-full flex-col items-center justify-end pb-16 text-gray-50 md:justify-center md:pb-0"
       >
-        <div class="container mx-auto md:px-10 xl:px-20">
+        <div class="container mx-auto px-5 md:px-10 xl:px-20">
+          <!-- Badge -->
           <div
-            class="flex w-fit items-center gap-1 rounded-full border-2 border-gray-50/25 bg-gray-50/10 px-4 py-2 backdrop-blur-sm"
+            class="flex w-fit items-center gap-1 rounded-full border-2 border-gray-50/25 bg-gray-50/10 px-3 py-1.5 backdrop-blur-sm md:px-4 md:py-2"
           >
-            <GlobeIcon class:list={"size-5 text-gray-50"} />
+            <GlobeIcon class:list={"size-4 text-gray-50 md:size-5"} />
 
-            <p class="text-sm">University of Mataram</p>
+            <p class="text-xs md:text-sm">University of Mataram</p>
           </div>
 
-          <div class="mt-6 max-w-lg space-y-5">
-            <h1 class="text-6xl leading-none font-semibold tracking-tight">
-              <span class="text-7xl">International</span><br />
+          <!-- Main Text -->
+          <div class="mt-2 max-w-lg space-y-2.5 md:mt-6 md:space-y-5">
+            <h1
+              class="text-4xl leading-none font-semibold tracking-tight xl:text-6xl"
+            >
+              <span class="text-5xl xl:text-7xl">International</span><br />
+
               <span>Degree Programs</span>
             </h1>
-            <p class="text-base text-gray-200">
-              INDEEP is a degree-granting educational program from the
-              University of Mataram for scholars from Indonesia and worldwide
-              which allows international exposure to English-mediate learning
-              processes.
+
+            <p class="text-sm text-gray-200 md:text-base">
+              Indeep Universiy of Mataram is a degree-granting educational
+              program from the University of Mataram for scholars from Indonesia
+              and worldwide which allows international exposure to
+              English-mediate learning processes.
             </p>
           </div>
 
-          <div class="mt-12 flex items-center gap-4">
+          <!-- Call to Action -->
+          <div
+            class="mt-8 flex flex-wrap items-start gap-3 md:mt-12 md:items-center md:gap-4"
+          >
             <button
-              class="flex items-center gap-1.5 rounded-md border border-sky-300/25 bg-sky-600 px-4 py-2.5 text-sm font-semibold text-gray-50"
+              class="flex items-center gap-1.5 rounded-md border border-sky-300/25 bg-sky-600 px-3 py-2 text-sm font-semibold whitespace-nowrap text-gray-50 md:px-4 md:py-2.5 md:text-base"
             >
               Register Now
 
@@ -115,9 +145,9 @@ import YoutubeIcon from "../components/icons/YoutubeIcon.astro";
             </button>
 
             <button
-              class="flex items-center gap-1.5 rounded-md border border-gray-50 bg-gray-50/10 px-4 py-2.5 text-sm font-semibold text-gray-50"
+              class="flex items-center gap-1.5 rounded-md border border-gray-50 bg-gray-50/10 px-3 py-2 text-sm font-semibold whitespace-nowrap text-gray-50 md:py-2.5 md:text-base"
             >
-              <CloudDownloadIcon class:list={"size-5 text-gray-50"} />
+              <CloudDownloadIcon class:list={"size-5 text-gray-50 md:size-5"} />
               Download Brochure
             </button>
           </div>
@@ -125,31 +155,43 @@ import YoutubeIcon from "../components/icons/YoutubeIcon.astro";
       </div>
     </header>
 
+    <!-- Benefit -->
     <section class="benefit bg-gray-950 text-gray-50">
       <div
-        class="container mx-auto grid grid-cols-3 gap-12 border-t border-gray-50/25 py-24 md:px-10 xl:px-20"
+        class="container mx-auto grid grid-cols-1 gap-12 border-t border-gray-50/25 px-5 py-12 md:px-10 md:py-24 xl:grid-cols-3 xl:px-20"
       >
-        <div>
-          <p class="text-5xl font-medium">1000+</p>
-          <h5 class="mt-2 text-xl font-semibold">Global Scholars</h5>
+        <!-- Card Benefit -->
+        <div class="card-benefit">
+          <p class="text-4xl font-medium md:text-5xl">1000+</p>
+
+          <h5 class="mt-2 text-lg font-semibold md:text-xl">Global Scholars</h5>
+
           <p class="mt-3 text-sm text-gray-300">
             A diverse community of ambitious students gaining a competitive edge
             through international exposure and cross-cultural collaboration.
           </p>
         </div>
-        <div>
-          <p class="text-5xl font-medium">20+</p>
-          <h5 class="mt-2 text-xl font-semibold">
+
+        <div class="card-benefit">
+          <p class="text-4xl font-medium md:text-5xl">20+</p>
+
+          <h5 class="mt-2 text-lg font-semibold md:text-xl">
             Prestigious University Partners
           </h5>
+
           <p class="mt-3 text-sm text-gray-300">
             Collaborating with world-class institutions to provide seamless
             credit transfers and exclusive double degree opportunities.
           </p>
         </div>
-        <div>
-          <p class="text-5xl font-medium">15+</p>
-          <h5 class="mt-2 text-xl font-semibold">Destination Countries</h5>
+
+        <div class="card-benefit">
+          <p class="text-3xl font-medium md:text-5xl">15+</p>
+
+          <h5 class="mt-2 text-lg font-semibold md:text-xl">
+            Destination Countries
+          </h5>
+
           <p class="mt-3 text-sm text-gray-300">
             Broaden your horizons with study paths spanning across the UK,
             Australia, USA, Europe, and Asia. Get your dreams to study across
@@ -159,8 +201,9 @@ import YoutubeIcon from "../components/icons/YoutubeIcon.astro";
       </div>
     </section>
 
-    <section class="intro-video py-28">
-      <div class="container mx-auto md:px-10 xl:px-20">
+    <!-- Intro Video -->
+    <section class="intro-video py-12 md:py-28">
+      <div class="container mx-auto px-5 md:px-10 xl:px-20">
         <iframe
           class="aspect-video rounded-xl border border-gray-100 shadow-lg"
           width="100%"
@@ -174,23 +217,27 @@ import YoutubeIcon from "../components/icons/YoutubeIcon.astro";
       </div>
     </section>
 
-    <div class="divider container mx-auto md:px-10 xl:px-20">
+    <!-- Divider -->
+    <div class="divider container mx-auto px-5 md:px-10 xl:px-20">
       <div class="h-px w-full bg-gray-200"></div>
     </div>
 
-    <section class="py-28">
-      <div class="container mx-auto md:px-10 xl:px-20">
-        <div class="grid grid-cols-2">
-          <h3 class="w-8/12 text-5xl leading-[1.2] font-semibold">
+    <!-- International Program -->
+    <section class="py-12 xl:py-28">
+      <div class="container mx-auto px-5 md:px-10 xl:px-20">
+        <div class="grid grid-cols-1 xl:grid-cols-2">
+          <h3 class="w-8/12 text-3xl leading-[1.2] font-semibold md:text-5xl">
             Our International Programs
           </h3>
+
           <p
-            class="max-w-lg place-content-center justify-self-end text-base text-gray-700"
+            class="mt-4 max-w-lg place-content-center justify-self-end text-sm text-gray-600 md:mt-0 md:text-base"
           >
             Step into a world of excellence with our curated degree programs.
             Whether you are looking for a double degree or a global exchange,
             your journey to a world-class education starts here.
           </p>
+
           <a
             href="/programs"
             class="mt-8 flex items-center gap-1.5 font-medium text-gray-800"
@@ -201,9 +248,11 @@ import YoutubeIcon from "../components/icons/YoutubeIcon.astro";
           </a>
         </div>
 
-        <div class="mt-14 grid grid-cols-2 gap-12">
-          <div class="flex items-center gap-6">
-            <div class="h-full w-6/12 overflow-hidden rounded-md">
+        <div class="mt-14 grid grid-cols-1 gap-12 xl:grid-cols-2">
+          <div
+            class="flex flex-col items-start gap-6 md:flex-row md:items-center"
+          >
+            <div class="h-full w-full overflow-hidden rounded-md md:w-6/12">
               <img
                 class="h-full w-full object-cover"
                 src="/images/program-1.png"
@@ -212,7 +261,7 @@ import YoutubeIcon from "../components/icons/YoutubeIcon.astro";
             </div>
 
             <div
-              class="flex h-full w-6/12 flex-col items-start justify-between py-3"
+              class="flex h-full flex-col items-start justify-between py-3 md:w-6/12"
             >
               <div>
                 <a href="/" class="text-xl leading-tight font-semibold">
@@ -245,8 +294,10 @@ import YoutubeIcon from "../components/icons/YoutubeIcon.astro";
             </div>
           </div>
 
-          <div class="flex items-center gap-6">
-            <div class="h-full w-6/12 overflow-hidden rounded-md">
+          <div
+            class="flex flex-col items-start gap-6 md:flex-row md:items-center"
+          >
+            <div class="h-full w-full overflow-hidden rounded-md md:w-6/12">
               <img
                 class="h-full w-full object-cover"
                 src="/images/program-2.png"
@@ -255,7 +306,7 @@ import YoutubeIcon from "../components/icons/YoutubeIcon.astro";
             </div>
 
             <div
-              class="flex h-full w-6/12 flex-col items-start justify-between py-3"
+              class="flex h-full flex-col items-start justify-between py-3 md:w-6/12"
             >
               <div>
                 <a href="/" class="text-xl leading-tight font-semibold">
@@ -288,8 +339,10 @@ import YoutubeIcon from "../components/icons/YoutubeIcon.astro";
             </div>
           </div>
 
-          <div class="flex items-center gap-6">
-            <div class="h-full w-6/12 overflow-hidden rounded-md">
+          <div
+            class="flex flex-col items-start gap-6 md:flex-row md:items-center"
+          >
+            <div class="h-full w-full overflow-hidden rounded-md md:w-6/12">
               <img
                 class="h-full w-full object-cover"
                 src="/images/program-3.png"
@@ -298,7 +351,7 @@ import YoutubeIcon from "../components/icons/YoutubeIcon.astro";
             </div>
 
             <div
-              class="flex h-full w-6/12 flex-col items-start justify-between py-3"
+              class="flex h-full flex-col items-start justify-between py-3 md:w-6/12"
             >
               <div>
                 <a href="/" class="text-xl leading-normal font-semibold">
@@ -331,8 +384,10 @@ import YoutubeIcon from "../components/icons/YoutubeIcon.astro";
             </div>
           </div>
 
-          <div class="flex items-center gap-6">
-            <div class="h-full w-6/12 overflow-hidden rounded-md">
+          <div
+            class="flex flex-col items-start gap-6 md:flex-row md:items-center"
+          >
+            <div class="h-full w-full overflow-hidden rounded-md md:w-6/12">
               <img
                 class="h-full w-full object-cover"
                 src="/images/program-4.png"
@@ -341,7 +396,7 @@ import YoutubeIcon from "../components/icons/YoutubeIcon.astro";
             </div>
 
             <div
-              class="flex h-full w-6/12 flex-col items-start justify-between py-3"
+              class="flex h-full flex-col items-start justify-between py-3 md:w-6/12"
             >
               <div>
                 <a href="/" class="text-xl leading-tight font-semibold">
@@ -377,33 +432,34 @@ import YoutubeIcon from "../components/icons/YoutubeIcon.astro";
       </div>
     </section>
 
-    <section class="bg-neutral-100 py-28">
+    <!-- Testimony -->
+    <section class="bg-neutral-100 py-12 md:py-28">
       <div
-        class="container mx-auto flex items-start justify-between md:px-10 xl:px-20"
+        class="container mx-auto flex flex-wrap items-start justify-between px-5 md:px-10 xl:px-20"
       >
         <div class="max-w-lg space-y-5">
-          <h3 class="text-5xl leading-[1.15] font-semibold">
+          <h3 class="text-3xl leading-[1.15] font-semibold xl:text-5xl">
             Discover the Indeep Experience
           </h3>
 
           <a
             href="/"
-            class="flex items-center gap-2 text-lg font-medium text-gray-800"
+            class="flex items-center gap-2 text-base font-medium text-gray-800 md:text-lg"
           >
             Read More Stories
             <ArrowRightIcon class:list={"size-5"} />
           </a>
         </div>
 
-        <div class="max-w-2xl">
-          <div class="flex items-start justify-between">
+        <div class="mt-12 max-w-2xl md:mt-0">
+          <div class="flex flex-wrap items-start justify-between gap-6">
             <img
               class="h-12"
               src="/images/testimony-1.png"
               alt="Testimony Logo 1"
             />
 
-            <div class="w-40 space-y-1 text-right">
+            <div class="space-y-1 text-left md:w-40 md:text-right">
               <p
                 class="text-[10px] font-semibold tracking-wider text-gray-500 uppercase"
               >
@@ -425,9 +481,9 @@ import YoutubeIcon from "../components/icons/YoutubeIcon.astro";
           </p>
 
           <div class="mt-12 flex items-center justify-between">
-            <div class="flex items-start gap-3">
+            <div class="flex flex-1 items-start gap-2 md:gap-3">
               <img
-                class="size-16 rounded-full"
+                class="size-10 rounded-full md:size-16"
                 src="/images/testimony-author-1.png"
                 alt="Testimony Author 1"
               />
@@ -442,17 +498,17 @@ import YoutubeIcon from "../components/icons/YoutubeIcon.astro";
 
             <div class="flex items-center gap-2">
               <div
-                class="flex size-12 items-center justify-center rounded-full bg-gray-100"
+                class="flex size-8 items-center justify-center rounded-full bg-gray-100 md:size-12"
               >
-                <ArrowRightIcon class:list={"size-5 rotate-180"} />
+                <ArrowRightIcon class:list={"size-4 rotate-180 md:size-5"} />
               </div>
 
               <p class="text-sm font-semibold">1 / 10</p>
 
               <div
-                class="flex size-12 items-center justify-center rounded-full bg-gray-100"
+                class="flex size-8 items-center justify-center rounded-full bg-gray-100 md:size-12"
               >
-                <ArrowRightIcon class:list={"size-5"} />
+                <ArrowRightIcon class:list={"size-4 md:size-5"} />
               </div>
             </div>
           </div>
@@ -461,20 +517,24 @@ import YoutubeIcon from "../components/icons/YoutubeIcon.astro";
     </section>
 
     <!-- Registration Timeline -->
-    <section class="registration-timeline py-28">
-      <div class="container mx-auto md:px-10 xl:px-20">
+    <section class="registration-timeline py-12 md:py-28">
+      <div class="container mx-auto px-5 md:px-10 xl:px-20">
         <div class="flex flex-col items-center text-center">
-          <h3 class="text-5xl font-semibold">Registration Timeline</h3>
+          <h3 class="text-3xl font-semibold md:text-5xl">
+            Registration Timeline
+          </h3>
 
-          <p class="mt-4 max-w-4xl text-center text-lg text-gray-700">
+          <p
+            class="mt-2 text-center text-sm text-gray-600 md:mt-4 md:max-w-4xl md:text-lg"
+          >
             Mark your calendar and follow our structured admissions process.
             Ensure all requirements are submitted within the designated timeline
             to secure your spot in our international program.
           </p>
 
-          <div class="mt-8">
+          <div class="mt-4 md:mt-8">
             <button
-              class="flex items-center gap-1.5 rounded-md border border-sky-300/25 bg-sky-600 px-4 py-2.5 text-sm font-semibold text-gray-50"
+              class="flex items-center gap-1.5 rounded-md border border-sky-300/25 bg-sky-600 px-3 py-2 text-sm font-semibold whitespace-nowrap text-gray-50 md:px-4 md:py-2.5 md:text-base"
             >
               Register Now
 
@@ -483,11 +543,13 @@ import YoutubeIcon from "../components/icons/YoutubeIcon.astro";
           </div>
         </div>
 
-        <div class="mt-16 grid grid-cols-3 gap-12">
+        <div class="mt-16 grid grid-cols-1 gap-12 xl:grid-cols-3">
           <div class="flex flex-row items-start gap-4">
-            <div class="w-full max-w-28 pt-4">
+            <div class="w-full max-w-16 pt-4 md:max-w-28">
               <div class="h-1 w-full bg-sky-600"></div>
-              <p class="mt-3 text-right text-base font-semibold text-gray-800">
+              <p
+                class="mt-3 text-right text-sm font-semibold text-gray-800 md:text-base"
+              >
                 March 5 – May 31, 2026
               </p>
             </div>
@@ -520,9 +582,11 @@ import YoutubeIcon from "../components/icons/YoutubeIcon.astro";
           </div>
 
           <div class="flex flex-row items-end gap-4">
-            <div class="w-full max-w-28 pb-4">
+            <div class="w-full max-w-16 pt-4 md:max-w-28">
               <div class="h-1 w-full bg-sky-600"></div>
-              <p class="mt-3 text-right text-base font-semibold text-gray-800">
+              <p
+                class="mt-3 text-right text-sm font-semibold text-gray-800 md:text-base"
+              >
                 June 27 – 28, 2026
               </p>
             </div>
@@ -557,9 +621,11 @@ import YoutubeIcon from "../components/icons/YoutubeIcon.astro";
           </div>
 
           <div class="flex flex-row items-start gap-4">
-            <div class="w-full max-w-28 pt-4">
+            <div class="w-full max-w-16 pt-4 md:max-w-28">
               <div class="h-1 w-full bg-sky-600"></div>
-              <p class="mt-3 text-right text-base font-semibold text-gray-800">
+              <p
+                class="mt-3 text-right text-sm font-semibold text-gray-800 md:text-base"
+              >
                 July 4 – 5, 2026
               </p>
             </div>
@@ -594,9 +660,11 @@ import YoutubeIcon from "../components/icons/YoutubeIcon.astro";
           </div>
 
           <div class="flex flex-row items-start gap-4">
-            <div class="w-full max-w-28 pt-4">
+            <div class="w-full max-w-16 pt-4 md:max-w-28">
               <div class="h-1 w-full bg-sky-600"></div>
-              <p class="mt-3 text-right text-base font-semibold text-gray-800">
+              <p
+                class="mt-3 text-right text-sm font-semibold text-gray-800 md:text-base"
+              >
                 July 10 – 11, 2026
               </p>
             </div>
@@ -629,9 +697,11 @@ import YoutubeIcon from "../components/icons/YoutubeIcon.astro";
           </div>
 
           <div class="flex flex-row items-end gap-4">
-            <div class="w-full max-w-28 pb-4">
+            <div class="w-full max-w-16 pb-4 md:max-w-28">
               <div class="h-1 w-full bg-sky-600"></div>
-              <p class="mt-3 text-right text-base font-semibold text-gray-800">
+              <p
+                class="mt-3 text-right text-sm font-semibold text-gray-800 md:text-base"
+              >
                 July 13, 2026
               </p>
             </div>
@@ -671,7 +741,7 @@ import YoutubeIcon from "../components/icons/YoutubeIcon.astro";
     <!-- News -->
     <section class="news bg-gray-100 py-28">
       <div class="container mx-auto md:px-10 xl:px-20">
-        <div class="grid grid-cols-2">
+        <div class="grid grid-cols-1 xl:grid-cols-2">
           <h3 class="w-8/12 text-5xl leading-[1.2] font-semibold">
             Latest News & Global Insights
           </h3>
@@ -692,7 +762,7 @@ import YoutubeIcon from "../components/icons/YoutubeIcon.astro";
           </a>
         </div>
 
-        <div class="mt-16 grid grid-cols-3 gap-12">
+        <div class="mt-16 grid grid-cols-1 gap-12 xl:grid-cols-3">
           <div class="news-card">
             <!-- Image -->
             <div class="aspect-video overflow-hidden rounded-md">
@@ -880,7 +950,7 @@ import YoutubeIcon from "../components/icons/YoutubeIcon.astro";
   <!-- Footer -->
   <footer class="bg-gray-950 pt-28 text-gray-50">
     <div class="container mx-auto md:px-10 xl:px-20">
-      <div class="flex items-center justify-between pb-20">
+      <div class="flex flex-wrap items-center justify-between pb-20">
         <div class="max-w-lg">
           <h3 class="text-5xl leading-tight font-semibold">
             Ready to Start Your Global Journey?
@@ -910,7 +980,7 @@ import YoutubeIcon from "../components/icons/YoutubeIcon.astro";
         </div>
 
         <div class="flex flex-row items-start">
-          <div class="-mt-2 -mr-8 -rotate-3">
+          <div class="-mt-2 -mr-8 hidden -rotate-3 xl:block">
             <img
               class="h-56 w-auto"
               src="/images/footer-1.png"
@@ -922,7 +992,7 @@ import YoutubeIcon from "../components/icons/YoutubeIcon.astro";
       </div>
 
       <div
-        class="flex items-start justify-between border-y border-gray-50/10 py-16"
+        class="flex flex-wrap items-start justify-between border-y border-gray-50/10 py-16"
       >
         <div class="flex flex-col items-start">
           <a href="/">
@@ -941,7 +1011,7 @@ import YoutubeIcon from "../components/icons/YoutubeIcon.astro";
             </p>
           </div>
 
-          <div class="flex items-center gap-8">
+          <div class="flex flex-wrap items-center gap-8">
             <div class="mt-6 max-w-md">
               <p class="text-base text-gray-300">Email</p>
               <p class="text-lg text-gray-50">indeep@unram.ac.id</p>
@@ -955,7 +1025,7 @@ import YoutubeIcon from "../components/icons/YoutubeIcon.astro";
         </div>
 
         <div class="space-y-10 pt-8">
-          <div class="flex items-center gap-16">
+          <div class="flex flex-wrap items-center gap-16">
             <div class="space-y-3">
               <h5 class="text-base font-semibold">Programs</h5>
 
@@ -1036,7 +1106,9 @@ import YoutubeIcon from "../components/icons/YoutubeIcon.astro";
         </div>
       </div>
 
-      <div class="flex items-center justify-between py-8">
+      <div
+        class="flex flex-row-reverse flex-wrap items-center justify-between py-8"
+      >
         <p class="text-sm">
           © 2026 InDeep University of Mataram. All Rights Reserved.
         </p>
